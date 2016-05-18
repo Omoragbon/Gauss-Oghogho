@@ -7,14 +7,14 @@ var Notesapplication = function (author, notelist) {
 
 
 }
-
+//This function takes the note content as the parameter and adds it to the notes list of the object.
 Noteapplication.prototype.create = function (note_content) {
 	this.list.push(note_content)
 	return content created
 
 }
 
-
+//This function lists out each of the notes in the notes list in the following format.
 NotesApplication.prototype.listNotes = function(){
 	obj = []; // local variable
 	for(var i =0; i < this.notelist.length; i++){
@@ -28,14 +28,11 @@ NotesApplication.prototype.listNotes = function(){
 				});
 		}
 	}
-	//for testing purposes 
-		for(var j = 0; j <obj.length; j++){
-		for(var key in obj[j]){
-			console.log(obj[j][key]);
-		}
-	}
+	
 
 };
+
+//This function takes a note_id which refers to the index of the note in the notes list and returns the content of that note as a string.
 
 Noteapplication.prototype.get = function (note_id) {
 		obj = [];
@@ -51,7 +48,7 @@ Noteapplication.prototype.get = function (note_id) {
 		return "No ID Found";
 	}
 };
-
+//This function take a search string, search_text and returns all the notes with that text within it in the following format
 NotesApplication.prototype.search = function(search_text){
 	var obj = [];
 	for(var i =0; i < this.notelist.length; i++){
@@ -65,7 +62,7 @@ NotesApplication.prototype.search = function(search_text){
 				    });
 		}
 };
-
+//This function deletes the note at the index note_id of the notes list.
 NotesApplication.prototype.delete = function(note_id){
 	if(note_id > this.notelist.length || note_id < 0){
 		return "Id does not Exist";
@@ -76,7 +73,7 @@ NotesApplication.prototype.delete = function(note_id){
 	}
 	
 };
-
+//This function replaces the content in the note at note_id with new_content.
 NotesApplication.prototype.edit = function(note_id,new_content){
 	if(note_id > this.notelist.length || note_id < 0){
 		return "Id does not Exist";
