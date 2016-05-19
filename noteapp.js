@@ -89,3 +89,15 @@ NotesApplication.prototype.edit = function(note_id,new_content){
 
 	
 
+// Implementing a Note Taking Application
+var Notesapplication = function () {}
+var noteme = new application ("")
+describe ("Notesapplication", function(){
+	it('should be 3 ', function(){
+		expect(1+2).toEqual(3);
+	});
+})
+// it ("should have property to creat", function() {
+// expect(Noteapplication.prototype.hasOwnProperty(creat)).toBe(true);
+// } );
+// it ("")
